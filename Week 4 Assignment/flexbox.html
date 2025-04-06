@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebook Store - Flexbox Layout</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+    }
+    /* Navigation Bar using Flexbox */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #444;
+    }
+    /* Main Content Layout using Flexbox */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      background-color: #ecf0f1;
+      justify-content: center;
+    }
+    .book {
+      background-color: #c8ebfc;
+      border: 1px solid #d5eef6;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      flex: 1 1 240px; /* Grow and shrink as needed */
+      max-width: 300px;
+    }
+    .book img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+            .flex-container {
+                justify-content: space-around;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .flex-container {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Ebooks</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- Book Cards -->
+    <div class="book">
+      <img src="Whispering girl.jpg" alt="Ebook Cover" />
+      <h2>The Wispering Girl</h2>
+      <p>by Emily Black</p>
+    </div>
+    <div class="book">
+      <img src="little ghost.jpg" alt="Ebook Cover" />
+      <h2>The Little Ghost</h2>
+      <p>by Obi West</p>
+    </div>
+    <div class="book">
+      <img src="the band.jpg" alt="Ebook Cover" />
+      <h2>The Band</h2>
+      <p>by Kathy Hills</p>
+    </div>
+  </main>
+</body>
+</html>

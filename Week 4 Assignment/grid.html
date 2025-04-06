@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebook Store - Grid Layout</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+    }
+    /* Navigation Bar using Flexbox */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #444;
+    }
+    /* Main Content Layout using CSS Grid */
+    .container {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .book {
+      background-color: #fff;
+      border: 1px solid #7347f5;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+    }
+    .book img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+      /* The grid automatically adjusts thanks to auto-fit and minmax */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Ebooks</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main class="container">
+    <!-- Book Cards -->
+    <div class="book">
+      <img src="Whispering girl.jpg" alt="Ebook Cover" />
+      <h2>The Wispering Girl</h2>
+      <p>by Emily Black</p>
+    </div>
+    <div class="book">
+      <img src="Lady soilder.jpg" alt="Ebook Cover" />
+      <h2>The Lady Soilder</h2>
+      <p>by Author Brown</p>
+    </div>
+    <div class="book">
+      <img src="little ghost.jpg" alt="Ebook Cover" />
+      <h2>The Little Ghost</h2>
+      <p>by Obi West</p>
+    </div>
+    <div class="book">
+      <img src="Dancing grandma.jpg" alt="Ebook Cover" />
+      <h2>Dancing Grandma</h2>
+      <p>by John Smith</p>
+    </div>
+    <div class="book">
+      <img src="lady vampire.jpg" alt="Ebook Cover" />
+      <h2>My Landlady is  A Vampire</h2>
+      <p>by Augustine White</p>
+    </div>
+    <div class="book">
+      <img src="the band.jpg" alt="Ebook Cover" />
+      <h2>The Band</h2>
+      <p>by Kathy Hills</p>
+    </div>
+  </main>
+</body>
+</html>
